@@ -66,7 +66,6 @@ function DataTable() {
   ];
 
   const handleSubmit = (id: number) => {
-    console.log(id);
     axios
       .post(
         "http://localhost:8080/data/delete",
