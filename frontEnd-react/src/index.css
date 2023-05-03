@@ -1,0 +1,68 @@
+html {
+  font-size: 1rem;
+}
+
+body {
+  background: #f7f7f7;
+}
+
+body::-webkit-scrollbar {
+  width: 1rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  height: 3.5rem;
+  background-color: rgba(#aaa, 0.6);
+  background-clip: content-box;
+  border: 0.25rem solid transparent;
+  border-radius: 0.5rem;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(#aaa, 0.8);
+}
+
+#root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Table Responsive */
+
+.table-responsive .ant-table-content {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table-responsive .ant-table-content .ant-table-cell {
+  white-space: nowrap;
+} /* Table Responsive */
+
+.table-responsive .ant-table-content {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table-responsive .ant-table-content .ant-table-cell {
+  white-space: nowrap;
+}
