@@ -5,7 +5,7 @@ import { TableWrapper } from "./Table.styles";
 import axios from "axios";
 
 function DataTable() {
-  const { data, remove, modal, setModal, setData } = useStore((state) => state);
+  const { data, modal, setModal, setData } = useStore((state) => state);
   const { setValues } = useValuesStore((state) => state);
 
   const columns = [

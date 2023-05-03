@@ -1,17 +1,15 @@
 import { Select, Button, Row, Col, Modal, Form } from "antd";
 import useStore from "../../stores/store";
 import axios from "axios";
-import useValuesStore, { ValuesType } from "../../stores/ValuesStore";
+import useValuesStore from "../../stores/ValuesStore";
 import { StyledInput, SelectWrapper, CancelButton } from "./Modal.styles";
 
 function FormModal({ onClose }: { onClose: () => void }) {
   const [form] = Form.useForm();
   const { Option } = Select;
 
-  const { data, edit, modal, setData } = useStore((state) => state);
+  const { modal, setData } = useStore((state) => state);
   const { values, setValues } = useValuesStore((state) => state);
-
-  // const addData = (values: ValuesType) => setData([...data, values]);
 
   const clear = () => {
     setValues({
@@ -25,12 +23,6 @@ function FormModal({ onClose }: { onClose: () => void }) {
   };
 
   const handleSubmit = () => {
-    // values.id
-    //   ? edit(values)
-    //   : addData({
-    //       ...values,
-    //       id: data[data.length - 1].id + 1,
-    //     });
     if (values.id) {
       // edit
       axios
